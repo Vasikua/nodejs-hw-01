@@ -4,11 +4,12 @@ export const getAllContacts = async () => {
     
     try {
         const data = await fs.readFile(PATH_DB, "utf-8"); 
-        const contacts = JSON.parse(data);
-        console.log(contacts);
+        const storageContacts = JSON.parse(data);
+        console.log(storageContacts);
     } catch (error) {
         console.error("somthihg went wrong", error);
     }
 };
 
 console.log(await getAllContacts());
+        

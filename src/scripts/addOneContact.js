@@ -11,7 +11,7 @@ export const addOneContact = async () => {
         const storageContacts = JSON.parse(data);
         const addedOneContact = [...storageContacts, ...contacts];
         await fs.writeFile(PATH_DB, JSON.stringify(addedOneContact));
-        console.log("one contact was added");
+        
 } catch (error) {
         console.error("somthing went wrong", error);
     }

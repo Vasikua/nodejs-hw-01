@@ -11,8 +11,7 @@ const generateContacts = async (number) => {
         const storageContacts = JSON.parse(data);
         const generateContacts = [...storageContacts, ...contacts];
         await fs.writeFile(PATH_DB, JSON.stringify(generateContacts));
-        console.log(`${number + 1}contacts was generated`);
-    } catch (error) {
+        } catch (error) {
         console.error("somthing went wrong", error);
     }
 };

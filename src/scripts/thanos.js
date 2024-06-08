@@ -12,7 +12,7 @@ export const thanos = async () => {
             }
         });
        await fs.writeFile(PATH_DB, JSON.stringify(editArrayContacts))   ;
-        console.log("contacts was edited");
+       
     } catch (error) {
         console.error("somthing went wrong", error);
     }    

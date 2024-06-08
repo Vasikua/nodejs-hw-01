@@ -3,8 +3,8 @@ import fs from "fs/promises";
 export const removeAllContacts = async () => {
 
     try {
-        await fs.writeFile(PATH_DB, JSON.stringify(''));
-        console.log("all contacts was deleted");
+        await fs.writeFile(PATH_DB, JSON.stringify([]));
+        
     } catch (error) {
         console.error("somthing went wrong", error);
     }
